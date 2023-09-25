@@ -13,7 +13,10 @@ const Signup = () => {
       password: pass,
       gender,
     };
-    const ans = await axios.post("http://localhost:8080/users/register", obj);
+    const ans = await axios.post(
+      "https://shiny-fox-top-hat.cyclic.cloud/users/register",
+      obj
+    );
     console.log(ans);
     setText(ans.data.msg);
 

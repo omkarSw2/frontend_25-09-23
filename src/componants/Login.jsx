@@ -9,7 +9,10 @@ const Login = () => {
   const handleclick = async () => {
     const obj = { email, password: pass };
     console.log(obj);
-    const ans = await axios.post("http://localhost:8080/users/login", obj);
+    const ans = await axios.post(
+      "https://shiny-fox-top-hat.cyclic.cloud/users/login",
+      obj
+    );
     console.log(ans);
 
     setText(ans.data.msg);

@@ -6,9 +6,12 @@ const Posts = () => {
   const [data, setDate] = useState([]);
   //   console.log(token);
   const datas = async () => {
-    const ans = await axios.get("http://localhost:8080/posts", {
-      headers: { Authorization: token },
-    });
+    const ans = await axios.get(
+      "https://shiny-fox-top-hat.cyclic.cloud/posts",
+      {
+        headers: { Authorization: token },
+      }
+    );
     console.log(ans.data);
     setDate(ans.data);
     return ans;
